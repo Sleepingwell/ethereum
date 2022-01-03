@@ -2,18 +2,29 @@
   "config": {
     "chainId": ${GEN_CHAIN_ID},
     "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "eip155Block": 0,
-    "eip158Block": 0
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "ethash": {}
   },
-    "alloc"      : {
-    ${GEN_ALLOC}
+  "nonce": "${GEN_NONCE}",
+  "timestamp": "0x5e4a53b2",
+  "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0x47b760",
+  "difficulty": "0x80000",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "alloc": {
+    "0xb2fca8c69b5c77a2a246868548ada96441f065c2": {
+      "balance": "10000000000000000000000000"
+    }
   },
-  "coinbase"   : "0x0000000000000000000000000000000000000000",
-  "difficulty" : "0x1",
-  "extraData"  : "",
-  "gasLimit"   : "0x2fefd8",
-  "nonce"      : "${GEN_NONCE}",
-  "mixhash"    : "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "parentHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "timestamp"  : "0x00"
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }

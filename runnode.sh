@@ -1,5 +1,6 @@
 #!/bin/bash
-IMGNAME="ethereum/client-go:v1.8.12"
+
+IMGNAME="ethereum/client-go:latest"
 NODE_NAME=$1
 NODE_NAME=${NODE_NAME:-"node1"}
 DETACH_FLAG=${DETACH_FLAG:-"-d"}
@@ -14,8 +15,7 @@ docker rm $CONTAINER_NAME 2> /dev/null
 RPC_PORTMAP=
 RPC_ARG=
 if [[ ! -z $RPC_PORT ]]; then
-#    RPC_ARG='--ws --wsaddr=0.0.0.0 --wsport 8546 --wsapi=db,eth,net,web3,personal --wsorigins "*" --rpc --rpcaddr=0.0.0.0 --rpcport 8545 --rpcapi=db,eth,net,web3,personal --rpccorsdomain "*"'
-    RPC_ARG='--rpc --rpcaddr=0.0.0.0 --rpcport 8545 --rpcapi=db,eth,net,web3,personal --rpccorsdomain "*"'
+    RPC_ARG='--http --http.addr 0.0.0.0 --http.port 8545 --http.corsdomain "*" --http.vhosts "*" --http.api admin,debug,txpool,ethash,miner,eth,net,web3,personal'
     RPC_PORTMAP="-p $RPC_PORT:8545"
 fi
 
