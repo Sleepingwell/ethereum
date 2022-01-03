@@ -7,3 +7,5 @@ echo "Removing volumes in $DATA_ROOT..."
 rm -Rf $DATA_ROOT/.ether-*
 rm -Rf $DATA_ROOT/.ethash
 rm -Rf $DATA_ROOT/.bootnode
+echo "Removing docker network 'ethereum'"
+docker network rm ethereum > /dev/null 2>&1
