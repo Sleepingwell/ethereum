@@ -7,8 +7,8 @@ CONTAINER_NAME="ethereum-$NODE_NAME"
 DATA_ROOT=${DATA_ROOT:-"$(pwd)/.ether-$NODE_NAME"}
 DATA_HASH=${DATA_HASH:-"$(pwd)/.ethash"}
 echo "Destroying old container $CONTAINER_NAME..."
-docker stop $CONTAINER_NAME
-docker rm $CONTAINER_NAME
+docker stop $CONTAINER_NAME 2> /dev/null
+docker rm $CONTAINER_NAME 2> /dev/null
 RPC_PORTMAP=
 RPC_ARG=
 if [[ ! -z $RPC_PORT ]]; then
