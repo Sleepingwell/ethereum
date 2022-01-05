@@ -7,7 +7,7 @@ Alguns scripts no projeto agilizam o uso desta imagem ou mesmo permitem sua cons
 
 ## Definição de Rede Ethereum Privada
 
-Para isolar uma rede blockchain Ethereum das redes públicas conhecidas não é necessário de forma alguma construir uma rede isolada. Os nós de uma rede privada podem ainda residir na Internet mas, pela natureza do próprio blockchain, estarão implementado uma rede fechada e privada, composta apenas por nós que compartilhem o mesmo bloco gênese. 
+Para isolar uma rede blockchain Ethereum das redes públicas conhecidas não é necessário de forma alguma construir uma rede isolada. Os nós de uma rede privada podem ainda residir na Internet mas, pela natureza do próprio blockchain, estarão implementado uma rede fechada e privada, composta apenas por nós que compartilhem o mesmo bloco gênese.
 
 Com esta imagem - e scripts associados - o usuário pode fornecer argumentos que irão gerar um bloco gênese previsível, criando um nói em um container Docker de um mesmo blockchain Ethereum privado em qualquer host na Internet (ou rede local, ou mesmo em localhost).
 
@@ -55,7 +55,7 @@ Note: if ran without arguments the scripts `runnode.sh` and `runminer.sh` assume
 
 ## Your first node
 
-The script `runnode.sh` runs the first node in your private Ethereum network (a container named "ethereum-node1"). It is important to notice that it looks for and connects to the bootnode, but since it is alone in the world it won't find any peer (yet) - the bootnode is a dumb node that doesn't count as a peer. 
+The script `runnode.sh` runs the first node in your private Ethereum network (a container named "ethereum-node1"). It is important to notice that it looks for and connects to the bootnode, but since it is alone in the world it won't find any peer (yet) - the bootnode is a dumb node that doesn't count as a peer.
 
 ```sh
 ./runnode.sh
@@ -77,7 +77,7 @@ Self-discovery can take a few seconds, but it is easy to check it with the scrip
 ./showpeers.sh
 ```
 
-An optional argument can specify another node container to be checked: 
+An optional argument can specify another node container to be checked:
 
 ```sh
 ./showpeers.sh ethereum-node2
@@ -102,6 +102,3 @@ Mining can take quite a long time to run for the first time. Onde again, to chec
 ```sh
 docker logs -f ethereum-miner1
 ```
-
-
-
